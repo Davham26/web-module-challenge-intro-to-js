@@ -159,7 +159,6 @@ function hungryDog(weight, age){
 }
 hungryDog(15, 1);
 
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -181,11 +180,24 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let compHand = Math.random();
+if (compHand > 0 && compHand < 1/3){
+  compHand = "rock";
+} else if (compHand > 1/3 && compHand < 2/3){
+  compHand = "paper";
+} else {
+  compHand = "scissors";
 }
-
-
+function game(user, computer){
+  if (user == 'scissors' && computer == 'paper' || user == 'rock' && computer == 'scissors' || user == 'paper' && computer == 'rock'){
+    return "you win!";
+  } else if (computer == 'scissors' && user == 'paper' || computer == 'rock' && user == 'scissors' || computer == 'paper' && user == 'rock'){
+    return "you lose!";
+  } else {
+    return "it's a tie";
+  }
+}
+console.log(game("rock", compHand));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
