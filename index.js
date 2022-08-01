@@ -135,7 +135,27 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 
 function hungryDog(weight, age){
-  
+  let foodWeight
+  if (age >= 1){
+    if (weight <= 5){
+      foodWeight = .05 * weight; 
+    } else if (weight <= 10){
+      foodWeight = .04 * weight; 
+    } else if (weight <= 15){
+      foodWeight = .03 * weight; 
+    } else if (weight > 15){
+      foodWeight = .02 * weight; 
+    }
+  } else if (age < 1){
+    if (age > 2 / 12 && age < 4 / 12){
+      foodWeight = .1 * weight; 
+    } else if (age > 4 / 12 && age < 7 / 12){
+      foodWeight = .05 * weight; 
+    } else if (age > 7 / 12 && age < 12/12){
+      foodWeight = .04 * weight; 
+    }
+  }
+  return foodWeight;
 }
 hungryDog(15, 1);
 
