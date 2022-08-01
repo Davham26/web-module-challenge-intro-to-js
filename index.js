@@ -240,10 +240,12 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(num){
+  return num + ' bottles of soda on the wall, ' + num + ' bottles of soda, take one down pass it around ' + (num - 1) + ' bottles of soda on the wall';
 }
-
+for (let i = 100; i >= 1; i--){
+  annoyingSong(i);
+} 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
