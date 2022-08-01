@@ -244,7 +244,7 @@ function annoyingSong(num){
   return num + ' bottles of soda on the wall, ' + num + ' bottles of soda, take one down pass it around ' + (num - 1) + ' bottles of soda on the wall';
 }
 for (let i = 100; i >= 1; i--){
-  annoyingSong(i);
+  console.log(annoyingSong(i));
 } 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
